@@ -36,7 +36,7 @@ void calculator(int selector) {
     else {
         result = div(num1, num2);
     }
-    printf("%d", result);
+    printf("%lf", result);
 }
 int main() {
     int sel;
