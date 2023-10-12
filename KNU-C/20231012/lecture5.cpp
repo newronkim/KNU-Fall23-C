@@ -8,24 +8,20 @@ void swap(int* pa, int* pb)
 
 void sort(int* a) {
 	for (int i = 0; i < 4; i++) {
-		int min = i;
-		for (int j = i + 1; j < 4; j++) {
-			if (a[j] < a[min]) {
-				min = j;
+		for (int j = i + 1; j < 5; j++) {
+			if (a[i] > a[j]) {
+				swap(&a[i], &a[j]);
 			}
-		}
-		if (min != i) {
-			swap(&a[i], &a[min]);
 		}
 	}
 }
 
 int main() {
-	int arr[5] = {5, 4, 1, 2, 3};
+	int arr[5] = {5, 4, 1, 7, 3};
 	for (int i = 0; i < 5; i++) {
 		printf("%d ", arr[i]);
 	}printf("\n");
-    sort(arr, 5);
+    sort(arr);
 	for (int i = 0; i < 5; i++) {
 		printf("%d ", arr[i]);
 	}
